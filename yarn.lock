@@ -2778,9 +2778,9 @@ linkify-it@~1.2.0:
   dependencies:
     uc.micro "^1.0.1"
 
-liquid-fire:
-  version "0.26.3"
-  resolved "https://registry.yarnpkg.com/liquid-fire/-/liquid-fire-0.26.3.tgz#4e25a65fc53e6e3c3cb2ad30aced2f311b50f476"
+liquid-fire@^0.26.4:
+  version "0.26.4"
+  resolved "https://registry.yarnpkg.com/liquid-fire/-/liquid-fire-0.26.4.tgz#cc7dca96704eaeeddaf383e6944a32bacb5673c6"
   dependencies:
     broccoli-funnel "^1.0.1"
     broccoli-merge-trees "^1.0.0"

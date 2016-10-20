@@ -1,0 +1,13 @@
+<div class="demo-page">
+
+  {{#liquid-if showSidebar use=animateWidth containerless=true}}
+    <div class="sidebar">
+    </div>
+  {{/liquid-if}}
+
+  {{#squishable-container width=600 unit="px"}}
+    <button {{action "toggleSidebar"}}>Toggle Me</button>
+    {{lorem-ipsum}}
+  {{/squishable-container}}
+
+</div>

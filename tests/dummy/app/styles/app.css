@@ -1,0 +1,13 @@
+.demo-page {
+    display: flex;
+}
+
+.demo-page > .liquid-child {
+    width: 20em;
+    background-color: blue;
+    height: 100vh;
+}
+
+.squishable-container {
+    flex: 1;
+}

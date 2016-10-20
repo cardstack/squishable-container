@@ -5,6 +5,13 @@ node_js:
 
 sudo: false
 
+addons:
+  apt:
+    sources:
+      - google-chrome
+    packages:
+      - google-chrome-stable
+
 cache:
   directories:
     - node_modules
@@ -34,6 +41,9 @@ before_install:
 install:
   - yarn install
   - bower install
+
+before_script:
+  - export DISPLAY=:99; sh -e /etc/init.d/xvfb start; sleep 3
 
 script:
   # Usually, it's ok to finish the test scenario without reverting

@@ -1,27 +1,29 @@
-# Squishable-container
+# squishable-container
 
-This README outlines the details of collaborating on this Ember addon.
+This addon provides a container that scales itself to match the available amount of space. 
 
 ## Installation
 
-* `git clone <repository-url>` this repository
-* `cd squishable-container`
-* `npm install`
-* `bower install`
+`ember install squishable-container`
 
-## Running
+## Usage
 
-* `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+Wrap your content in `squishable-component`:
 
-## Running Tests
+```hbs
+{{#squishable-container}}
+  Your content here.
+{{/squishable-container}}
+```
 
-* `npm test` (Runs `ember try:each` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
+Now if anything else changes the width available to squishable-component, it will scale its content up or down to match.
 
-## Building
+`squishable-container` necessarily needs to decide at what width it should set the scale to 100%. By default, it uses the full viewport width. You can pick a different width by setting the `width` and `unit` properties:
 
-* `ember build`
+```hbs
+{{#squishable-container width=800 unit="px"}}
+  Your content here.
+{{/squishable-container}}
+```
 
-For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
+Supported units include em, vw, px, rem, and ex;

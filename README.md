@@ -8,7 +8,7 @@ This addon provides a container that scales itself to match the available amount
 
 ## Usage
 
-Wrap your content in `squishable-component`:
+Wrap your content in `squishable-container`:
 
 ```hbs
 {{#squishable-container}}
@@ -16,7 +16,7 @@ Wrap your content in `squishable-component`:
 {{/squishable-container}}
 ```
 
-Now if anything else changes the width available to squishable-component, it will scale its content up or down to match.
+Now if anything else changes the width available to squishable-container, it will scale its content up or down to match.
 
 `squishable-container` necessarily needs to decide at what width it should set the scale to 100%. By default, it uses the full viewport width. You can pick a different width by setting the `width` and `unit` properties:
 

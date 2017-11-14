@@ -1,6 +1,6 @@
 {
   "name": "squishable-container",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A component that scales itself to fill available space.",
   "keywords": [
     "ember-addon",

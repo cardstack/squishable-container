@@ -6,6 +6,7 @@ const allowedUnits = ['em', 'vw', 'px', 'rem', 'ex'];
 
 export default Ember.Component.extend({
   layout,
+
   width: 100,
   unit: 'vw',
   classNames: ['squishable-container'],
@@ -16,7 +17,7 @@ export default Ember.Component.extend({
   },
 
   innerStyle: Ember.computed('width', 'unit', function() {
-    let width = this.get('width');
+    let width = parseInt(this.get('width'), 10);
     let unit = this.get('unit');
     if (typeof width !== 'number') {
       throw new Error(`squishable-container: width must be a number, not ${width}`);
@@ -30,6 +31,7 @@ export default Ember.Component.extend({
   didInsertElement() {
     requestAnimationFrame(() => this.updateScale());
   },
+
   updateScale() {
     if (this.isDestroyed) { return; }
     let scale = this.$().width() / this.$().children(':first').width();

@@ -31,7 +31,7 @@ export default Ember.Component.extend({
     requestAnimationFrame(() => this.updateScale());
   },
   updateScale() {
-    if (this.isDestroyed) { return; }
+    if (this.isDestroyed || !this.$()) { return; }
     let scale = this.$().width() / this.$().children(':first').width();
     if (Math.abs(this._scale - scale) > 0.0001) {
       this.$().css({

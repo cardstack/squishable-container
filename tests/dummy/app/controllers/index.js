@@ -1,7 +1,7 @@
-import Ember from 'ember';
+import Controller from '@ember/controller';
 import { animate, Promise } from 'liquid-fire';
 
-export default Ember.Controller.extend({
+export default Controller.extend({
   actions: {
     toggleSidebar() {
       this.set('showSidebar', !this.get('showSidebar'));

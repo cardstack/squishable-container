@@ -1,8 +1,7 @@
 # squishable-container
 
-This addon provides a container that scales itself to match the available amount of space. 
+This addon provides a container that scales itself to match the available amount of space.
 
-## Installation
 
 `ember install squishable-container`
 

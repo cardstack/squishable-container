@@ -1,8 +1,7 @@
-/* eslint-env node */
 'use strict';
 
 module.exports = {
-  name: 'squishable-container',
+  name: require('./package').name,
   included: function(app){
     app.import('vendor/squishable-container.css');
   }
